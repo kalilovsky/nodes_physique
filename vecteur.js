@@ -2,6 +2,7 @@ class vecteur {
     constructor(x,y){
         this.x = x;
         this.y = y;
+        this.z = 0;
     }
     setX(valeur){
         this.x = valeur;
@@ -14,6 +15,12 @@ class vecteur {
     }
     getY(){
         return this.y;
+    }
+    setZ2D(valeur){
+        this.z = valeur;
+    }
+    getZ2D(){
+        return this.z;
     }
     setAngle(angle){
         let longueur = this.getLongueur();
@@ -46,6 +53,7 @@ class vecteur {
     addTo(v2) {
 		this.x += v2.getX();
 		this.y += v2.getY();
+        this.z += v2.getZ2D();
 	}
     subtractFrom(v2) {
 		this.x -= v2.getX();
